@@ -13,7 +13,7 @@ OcclusionCullingSettings:
 --- !u!104 &2
 RenderSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 9
+  serializedVersion: 10
   m_Fog: 0
   m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   m_FogMode: 3
@@ -38,13 +38,12 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 12
-  m_GIWorkflowMode: 1
+  serializedVersion: 13
+  m_BakeOnSceneLoad: 0
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -67,9 +66,6 @@ LightmapSettings:
     m_LightmapParameters: {fileID: 0}
     m_LightmapsBakeMode: 1
     m_TextureCompression: 1
-    m_FinalGather: 0
-    m_FinalGatherFiltering: 1
-    m_FinalGatherRayCount: 256
     m_ReflectionCompression: 2
     m_MixedBakeMode: 2
     m_BakeBackend: 1
@@ -166,6 +162,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 9f236562eddc5e046bb70cf7a7eb28dd, type: 3}
+  m_Resource: {fileID: 8300000, guid: 9f236562eddc5e046bb70cf7a7eb28dd, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.75
   m_Pitch: 1
@@ -294,6 +291,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: bbf7e74cef63a854aa4b737d82a4c4bc, type: 3}
+  m_Resource: {fileID: 8300000, guid: bbf7e74cef63a854aa4b737d82a4c4bc, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.75
   m_Pitch: 1
@@ -422,6 +420,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 5781575e2fa61c742b12b3595fdaeb7b, type: 3}
+  m_Resource: {fileID: 8300000, guid: 5781575e2fa61c742b12b3595fdaeb7b, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.75
   m_Pitch: 1
@@ -550,6 +549,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 5acf65b234f531f42a59e15e5e3e838e, type: 3}
+  m_Resource: {fileID: 8300000, guid: 5acf65b234f531f42a59e15e5e3e838e, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.1
   m_Pitch: 1
@@ -678,6 +678,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: de2ca44c1eb13b645be7f46ec70609b1, type: 3}
+  m_Resource: {fileID: 8300000, guid: de2ca44c1eb13b645be7f46ec70609b1, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.75
   m_Pitch: 1
@@ -904,15 +905,17 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 6e72656b
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -946,13 +949,14 @@ Animation:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1222987284}
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Animation: {fileID: 7400000, guid: 3641a19a17f2e3f4da6f2d14166d4890, type: 2}
   m_Animations:
   - {fileID: 7400000, guid: 3641a19a17f2e3f4da6f2d14166d4890, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
+  m_UpdateMode: 0
   m_CullingType: 0
 --- !u!1 &1363552271
 GameObject:
@@ -1098,7 +1102,7 @@ RectTransform:
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1392650796
 Animator:
-  serializedVersion: 5
+  serializedVersion: 7
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1112,6 +1116,7 @@ Animator:
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
@@ -1198,6 +1203,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: caa4077c831bb7f45bacaf4ec7d432e3, type: 3}
+  m_Resource: {fileID: 8300000, guid: caa4077c831bb7f45bacaf4ec7d432e3, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0
   m_Pitch: 2
@@ -1458,6 +1464,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: f99e617e0419d0b44a16d00b47c9931b, type: 3}
+  m_Resource: {fileID: 8300000, guid: f99e617e0419d0b44a16d00b47c9931b, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0
   m_Pitch: 2
@@ -1581,8 +1588,8 @@ MonoBehaviour:
   transition: {fileID: 1392650796}
   nextButton: {fileID: 1527693290}
   dialogueList:
-  - The story has ended for this time but surely the next time they have a sleepover...
-  - ... another adventure will be started! :)
+  - As one sleepover comes to an end...
+  - Another one awaits with more alluring adventures!
   dialogueCharacters: []
   characterAnimations: []
   voiceSounds:
@@ -1652,6 +1659,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 0cb9e4908b9b2274c8e41c14a3317fab, type: 3}
+  m_Resource: {fileID: 8300000, guid: 0cb9e4908b9b2274c8e41c14a3317fab, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.75
   m_Pitch: 1
@@ -1848,6 +1856,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 08685b662890a1a45ac2411814c113f6, type: 3}
+  m_Resource: {fileID: 8300000, guid: 08685b662890a1a45ac2411814c113f6, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.2
   m_Pitch: 1
